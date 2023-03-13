@@ -1,0 +1,75 @@
+----------------------------------------------------------------------
+[За дупликати команди не се доведени објаснувања] 
+----------------------------------------------------------------------
+
+4. git init
+    [создава нов GIT репозиториум]
+
+5. git remote add origin https://github.com/Alex9633/SI_2023_lab1_215093.git
+    [поврзува локалниот со оддалечениот репозиториум]
+
+6. echo "# Aleksandar Milanov 215093" >> README.md
+    [создава нова датотека README.md со содржина "Aleksandar Milanov 215093"]
+
+    git add README.md
+    [додава README.md во репозиториумот]
+
+    git commit -m "initial commit"
+    [прави commit на новододадената датотека README.md со порака "initial commit"]
+
+7. git add SILab1.java
+    git commit -m "Add java class"
+
+8. git push --all origin
+    [синхронизира сите гранки со оддалечениот репозиториум]
+
+9. git branch bug1
+    git branch bug2
+    git branch bug3
+    [создава нови 3 гранки, bug1, bug2, bug3]
+
+10. git checkout bug1
+      [се префрлува на гранка bug1]
+
+11. git commit -am "Fix wrong loop for reading"
+      [прави commit на модифицираните дадотеки]
+
+12. git checkout bug2
+
+13. git commit -am "Fix wrong condition in filterOddNumbers"
+
+14. git checkout bug3
+
+15. git commit -am "Fix method sumEvenNumbers"
+
+16. git push --all origin
+
+17. git checkout master
+
+18. git merge bug1   (no conflicts; Fast-forward)
+      [спојува гранка bug1 со master]
+
+19. git push --all origin
+
+20. git merge bug2   (no conflicts; ort)
+
+21. git push --all origin
+
+22. git checkout bug3
+
+23. git rebase master bug3
+      [прави rebase на гранка bug3 спрема master (rebase е менување на основата на гранката од
+      еден commit во друг, како да била направена од друг commit)]
+
+24. git checkout master
+
+25. git merge bug3   (no conflicts; Fast-forward)
+
+26. git push --force --all origin
+      [форсира синхронизација на сите гранки со оддалечениот репозиториум]
+      
+27. git add logs.txt
+      git add 215093.txt
+      git commit -m "Final commit"
+
+28. git push --all origin
